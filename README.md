@@ -15,7 +15,7 @@ call jSlider via Javascript
 	
 ## Options
 ### Variable
-`type` - `'continuous'` or `'discrete'`, determine hwo handler moves on slider
+`type` - `'continuous'` or `'discrete'`, determine how handler moves on slider
 
 `width` - set width for slider
 
