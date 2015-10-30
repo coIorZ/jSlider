@@ -312,19 +312,19 @@
 		},
 		
 		// slide to specific value
-		slideValue: function (value, isFire) {
+		slideValue: function (value, flag) {
 			if (value < this.minValue) value = this.minValue;
 			if (value > this.maxValue) value = this.maxValue;
 			this.value = value;
 			this.update();
 
-			this.options.afterSlide(this.value.toFixed(this.fixed), this.minValue, this.maxValue);
+			if(flag) this.options.afterSlide(this.value.toFixed(this.fixed), this.minValue, this.maxValue);
 
 			return this;
 		},
 
 		// autoslide by specific increment and interval
-		autoSlide: function (increment, interval, isFire) {
+		autoSlide: function (increment, interval, flag) {
 			// if (isNaN(increment) || isNaN(interval)) return;
 			var self = this;
 
@@ -342,7 +342,7 @@
 				self.value += increment;
 				self.update();
 
-				if (isFire) self.options.onAutoSlide(self.value.toFixed(self.fixed), self.minValue, self.maxValue);
+				if (flag) self.options.onAutoSlide(self.value.toFixed(self.fixed), self.minValue, self.maxValue);
 
 				if (self.value === self.minValue || self.value === self.maxValue) {
 					self.clearTimer();
@@ -354,21 +354,21 @@
 		},
 		
 		// slide x to the left
-		slideLeft: function (left, isFire) {
+		slideLeft: function (left, flag) {
 			if(isNaN(left)) return;
 			this.$handler[0].style.left = left + 'px';
 			this.value = this.leftToValue(left);
 			this.update();
 
-			if (isFire) this.options.afterSlide(this.value.toFixed(this.fixed), this.minValue, this.maxValue);
+			if (flag) this.options.afterSlide(this.value.toFixed(this.fixed), this.minValue, this.maxValue);
 
 			return this;
 		},
 		
 		// slide x to the right
-		slideRight: function (right, isFire) {
+		slideRight: function (right, flag) {
 			var len = this.$bar.width() - this.$handler[0].offsetWidth;
-			this.slideLeft(len - right, isFire);
+			this.slideLeft(len - right, flag);
 		},
 
 		// get value by handler.style.left
