@@ -13,6 +13,19 @@ call jSlider via Javascript
 
 	$('.slider').jSlider();
 	
+## Screenshots
+defaul slider, no options defined
+
+![](s1.png)
+
+show tip, reverse
+
+![](s2.png)
+
+'discrete' type, set minValue to 1 maxValue to 12, fixed to 0
+
+![](s3.png)
+	
 ## Options
 ### Variable
 `type` - `'continuous'` or `'discrete'`, determine how handler moves on slider
@@ -35,7 +48,7 @@ call jSlider via Javascript
 
 `reverse` - if max value on the left and min value on the right
 
-`fixed` - toFixed level of value
+`fixed` - toFixed level of value, defaults to 2
 
 `windowContext` - reference to window
 
