@@ -16,15 +16,15 @@ call jSlider via Javascript
 ## Screenshots
 defaul slider, no options defined
 
-![](s1.png)
+![](img/s1.png)
 
 show tip, reverse
 
-![](s2.png)
+![](img/s2.png)
 
 'discrete' type, set minValue to 1 maxValue to 12, fixed to 0
 
-![](s3.png)
+![](img/s3.png)
 	
 ## Options
 ### Variable
