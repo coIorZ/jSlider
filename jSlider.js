@@ -411,6 +411,7 @@
 		this.each(function () {
 			var options, slider, arg1, arg2, flag;
 			if (!(slider = this.jSlider)) {
+				options = defaults;
 				if(settings && typeof settings === 'object') options = $.extend({}, defaults, settings);
 				this.jSlider = slider = new JSlider(this, options);
 			}
