@@ -14,7 +14,7 @@ call jSlider via Javascript
 	$('.slider').jSlider();
 	
 ## Screenshots
-defaul slider, no options defined
+defaul slider, no options given
 
 ![](img/s1.png)
 
